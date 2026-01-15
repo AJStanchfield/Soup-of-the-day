@@ -168,6 +168,12 @@ async def soup(ctx, mode: str = None):
         await ctx.send(f"Today's soup is Monty's Gay Queer Soup 🍲")
         return
 
+    if mode and mode.lower() == 'bye':
+        await ctx.send(f"Don't Let Me Die, Father")
+        return
+
+
+
     # deterministic daily selection via GenerateSoupOfTheDay()
     await ctx.send(f"Soup of the day: {GenerateSoupOfTheDay()} 🍲")
 
